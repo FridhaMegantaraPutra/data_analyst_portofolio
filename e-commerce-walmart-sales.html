@@ -1,0 +1,1997 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>e-Commerce (Walmart) Sales &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'e-commerce-walmart-sales';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ANALISIS PENJUALAN TOKO RETAIL" href="retail-sales-analyst.html" />
+    <link rel="prev" title="HELLO IAM MEGANTARA" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    HELLO IAM MEGANTARA
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">e-Commerce (Walmart) Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retail-sales-analyst.html">ANALISIS PENJUALAN TOKO RETAIL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tata-online-retail-dataset.html">TATA: Online Retail Dataset</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fe-commerce-walmart-sales.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/e-commerce-walmart-sales.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>e-Commerce (Walmart) Sales</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-fridha-megantara-putra">By Fridha Megantara Putra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-data">import library dan data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-berdasarkan-kategori-produk">Total Pembelian Berdasarkan Kategori Produk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-usia">Customer Segmentation berdasarkan usia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pekerjaan-yang-paling-umum-dalam-setiap-kelompok-usia">Pekerjaan yang Paling Umum dalam Setiap Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-kelompok-usia">Total Pembelian per Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-setiap-kelompok-usia">Produk yang paling sering dibeli oleh setiap kelompok usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Produk yang Paling Sering Dibeli oleh Setiap Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kota-yang-paling-umum-dihuni-dalam-setiap-kelompok-usia">Kota yang paling umum dihuni dalam setiap kelompok usia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-status-pernikahan">Customer Segmentation berdasarkan status pernikahan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-orang-yang-sudah-menikah-dan-belum-menikah">Produk yang Paling Sering Dibeli oleh Orang yang Sudah Menikah dan Belum Menikah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-berdasarkan-status-pernikaha">Total Pembelian Berdasarkan Status Pernikaha</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-jenis-kelamin">Customer Segmentation berdasarkan jenis kelamin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-untuk-setiap-jenis-kelamin">produk terlaris untuk setiap jenis kelamin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-kelompok-jenis-kelamin">Total pembelian per kelompok jenis kelamin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-pekerjaan">Customer Segmentation Berdasarkan Pekerjaan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-setiap-jenis-pekerjaan">Produk yang paling sering dibeli oleh setiap jenis pekerjaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-jenis-pekerjaan">Total pembelian per jenis pekerjaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-a">Customer Segmentation Berdasarkan Lamanya Menetap Di Kota A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-tinggal-di-kota-a-berdasarkan-lama-tinggal">Produk Terlaris - Tinggal di Kota A Berdasarkan Lama Tinggal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-a">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota A:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-b">Customer Segmentation Berdasarkan Lamanya Menetap Di Kota B</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-di-kota-b-berdasarkan-lama-tinggal">Produk Terlaris - di Kota B Berdasarkan Lama Tinggal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-b">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota B:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-c">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota C:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-bagi-setiap-kelompok-lama-tinggal-di-kota-c">Produk Terlaris bagi Setiap Kelompok Lama Tinggal di Kota C</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="e-commerce-walmart-sales">
+<h1>e-Commerce (Walmart) Sales<a class="headerlink" href="#e-commerce-walmart-sales" title="Permalink to this heading">#</a></h1>
+<section id="by-fridha-megantara-putra">
+<h2>By Fridha Megantara Putra<a class="headerlink" href="#by-fridha-megantara-putra" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="import-library-dan-data">
+<h2>import library dan data<a class="headerlink" href="#import-library-dan-data" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>import data dan melakukan pengecekan dimensi,informasi,statistik deskriptif,missing value,dan duplikat data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Load dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;walmart.csv&#39;</span><span class="p">)</span>  <span class="c1"># Sesuaikan dengan path dan nama file dataset Anda</span>
+
+<span class="c1"># Memeriksa dimensi data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensi Data:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Melihat sekilas data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sekilas Data:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Informasi dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Informasi Dataset:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+
+<span class="c1"># Statistik deskriptif</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Statistik Deskriptif:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="c1"># Memeriksa nilai hilang</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Nilai Hilang per Kolom:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Memeriksa duplikasi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah Baris Duplikat:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensi Data: (550068, 10)
+
+Sekilas Data:
+   User_ID Product_ID Gender   Age  Occupation City_Category  \
+0  1000001  P00069042      F  0-17          10             A   
+1  1000001  P00248942      F  0-17          10             A   
+2  1000001  P00087842      F  0-17          10             A   
+3  1000001  P00085442      F  0-17          10             A   
+4  1000002  P00285442      M   55+          16             C   
+
+  Stay_In_Current_City_Years  Marital_Status  Product_Category  Purchase  
+0                          2               0                 3      8370  
+1                          2               0                 1     15200  
+2                          2               0                12      1422  
+3                          2               0                12      1057  
+4                         4+               0                 8      7969  
+
+Informasi Dataset:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 550068 entries, 0 to 550067
+Data columns (total 10 columns):
+ #   Column                      Non-Null Count   Dtype 
+---  ------                      --------------   ----- 
+ 0   User_ID                     550068 non-null  int64 
+ 1   Product_ID                  550068 non-null  object
+ 2   Gender                      550068 non-null  object
+ 3   Age                         550068 non-null  object
+ 4   Occupation                  550068 non-null  int64 
+ 5   City_Category               550068 non-null  object
+ 6   Stay_In_Current_City_Years  550068 non-null  object
+ 7   Marital_Status              550068 non-null  int64 
+ 8   Product_Category            550068 non-null  int64 
+ 9   Purchase                    550068 non-null  int64 
+dtypes: int64(5), object(5)
+memory usage: 42.0+ MB
+None
+
+Statistik Deskriptif:
+            User_ID     Occupation  Marital_Status  Product_Category  \
+count  5.500680e+05  550068.000000   550068.000000     550068.000000   
+mean   1.003029e+06       8.076707        0.409653          5.404270   
+std    1.727592e+03       6.522660        0.491770          3.936211   
+min    1.000001e+06       0.000000        0.000000          1.000000   
+25%    1.001516e+06       2.000000        0.000000          1.000000   
+50%    1.003077e+06       7.000000        0.000000          5.000000   
+75%    1.004478e+06      14.000000        1.000000          8.000000   
+max    1.006040e+06      20.000000        1.000000         20.000000   
+
+            Purchase  
+count  550068.000000  
+mean     9263.968713  
+std      5023.065394  
+min        12.000000  
+25%      5823.000000  
+50%      8047.000000  
+75%     12054.000000  
+max     23961.000000  
+
+Nilai Hilang per Kolom:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>User_ID                       0
+Product_ID                    0
+Gender                        0
+Age                           0
+Occupation                    0
+City_Category                 0
+Stay_In_Current_City_Years    0
+Marital_Status                0
+Product_Category              0
+Purchase                      0
+dtype: int64
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Baris Duplikat: 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>User_ID</th>
+      <th>Product_ID</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Occupation</th>
+      <th>City_Category</th>
+      <th>Stay_In_Current_City_Years</th>
+      <th>Marital_Status</th>
+      <th>Product_Category</th>
+      <th>Purchase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1000001</td>
+      <td>P00069042</td>
+      <td>F</td>
+      <td>0-17</td>
+      <td>10</td>
+      <td>A</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>8370</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1000001</td>
+      <td>P00248942</td>
+      <td>F</td>
+      <td>0-17</td>
+      <td>10</td>
+      <td>A</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>15200</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1000001</td>
+      <td>P00087842</td>
+      <td>F</td>
+      <td>0-17</td>
+      <td>10</td>
+      <td>A</td>
+      <td>2</td>
+      <td>0</td>
+      <td>12</td>
+      <td>1422</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1000001</td>
+      <td>P00085442</td>
+      <td>F</td>
+      <td>0-17</td>
+      <td>10</td>
+      <td>A</td>
+      <td>2</td>
+      <td>0</td>
+      <td>12</td>
+      <td>1057</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1000002</td>
+      <td>P00285442</td>
+      <td>M</td>
+      <td>55+</td>
+      <td>16</td>
+      <td>C</td>
+      <td>4+</td>
+      <td>0</td>
+      <td>8</td>
+      <td>7969</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="total-pembelian-berdasarkan-kategori-produk">
+<h2>Total Pembelian Berdasarkan Kategori Produk<a class="headerlink" href="#total-pembelian-berdasarkan-kategori-produk" title="Permalink to this heading">#</a></h2>
+<p>Total pembelian berdasarkan kategori produk:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Product_Category</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1910013754</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>268516186</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>204084713</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>27380488</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>941835229</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>324150302</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>60896731</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>854318799</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>6370324</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>100837301</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>113791115</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>5331844</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>4008601</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>20014696</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>92969042</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>145120612</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>5878699</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>9290201</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>59378</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>944727</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan kategori produk dan menghitung total pembelian</span>
+<span class="n">total_purchase_by_product_category</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product_Category&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total pembelian berdasarkan kategori produk:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_purchase_by_product_category</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan bar chart</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Product_Category&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">total_purchase_by_product_category</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian Berdasarkan Kategori Produk&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kategori Produk&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total pembelian berdasarkan kategori produk:
+    Product_Category    Purchase
+0                  1  1910013754
+1                  2   268516186
+2                  3   204084713
+3                  4    27380488
+4                  5   941835229
+5                  6   324150302
+6                  7    60896731
+7                  8   854318799
+8                  9     6370324
+9                 10   100837301
+10                11   113791115
+11                12     5331844
+12                13     4008601
+13                14    20014696
+14                15    92969042
+15                16   145120612
+16                17     5878699
+17                18     9290201
+18                19       59378
+19                20      944727
+</pre></div>
+</div>
+<img alt="_images/ccd70ce69066628cdf9f88d72b9e3d8bdd2abbed68ef1b29182ae759e2ecb081.png" src="_images/ccd70ce69066628cdf9f88d72b9e3d8bdd2abbed68ef1b29182ae759e2ecb081.png" />
+</div>
+</div>
+</section>
+<section id="customer-segmentation-berdasarkan-usia">
+<h2>Customer Segmentation berdasarkan usia<a class="headerlink" href="#customer-segmentation-berdasarkan-usia" title="Permalink to this heading">#</a></h2>
+<section id="pekerjaan-yang-paling-umum-dalam-setiap-kelompok-usia">
+<h3>Pekerjaan yang Paling Umum dalam Setiap Kelompok Usia<a class="headerlink" href="#pekerjaan-yang-paling-umum-dalam-setiap-kelompok-usia" title="Permalink to this heading">#</a></h3>
+<p>dapat kita ketahui pekerjaan yang paling umum dalam setiap kelompok usia adalah</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Age</p></th>
+<th class="head"><p>Occupation</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0-17</p></td>
+<td><p>10</p></td>
+<td><p>10951</p></td>
+</tr>
+<tr class="row-odd"><td><p>18-25</p></td>
+<td><p>4</p></td>
+<td><p>48241</p></td>
+</tr>
+<tr class="row-even"><td><p>26-35</p></td>
+<td><p>0</p></td>
+<td><p>34204</p></td>
+</tr>
+<tr class="row-odd"><td><p>36-45</p></td>
+<td><p>7</p></td>
+<td><p>18762</p></td>
+</tr>
+<tr class="row-even"><td><p>46-50</p></td>
+<td><p>1</p></td>
+<td><p>7089</p></td>
+</tr>
+<tr class="row-odd"><td><p>51-55</p></td>
+<td><p>7</p></td>
+<td><p>5355</p></td>
+</tr>
+<tr class="row-even"><td><p>55+</p></td>
+<td><p>13</p></td>
+<td><p>4870</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_occupation_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Occupation&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan pekerjaan yang paling umum dalam setiap kelompok usia</span>
+<span class="n">most_common_occupation_per_age_group</span> <span class="o">=</span> <span class="n">age_occupation_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">age_occupation_counts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pekerjaan yang paling umum dalam setiap kelompok usia:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_common_occupation_per_age_group</span><span class="p">)</span>
+
+<span class="c1"># Memplot data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Occupation&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_common_occupation_per_age_group</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;Set2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pekerjaan yang Paling Umum dalam Setiap Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pekerjaan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Occupation&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pekerjaan yang paling umum dalam setiap kelompok usia:
+       Age  Occupation  Count
+6     0-17          10  10951
+17   18-25           4  48241
+33   26-35           0  34204
+60   36-45           7  18762
+75   46-50           1   7089
+101  51-55           7   5355
+126    55+          13   4870
+</pre></div>
+</div>
+<img alt="_images/471d90365686ea1a0ebac532f47f24103aa49bec7980655adef3c8699652dc8e.png" src="_images/471d90365686ea1a0ebac532f47f24103aa49bec7980655adef3c8699652dc8e.png" />
+</div>
+</div>
+</section>
+<section id="total-pembelian-per-kelompok-usia">
+<h3>Total Pembelian per Kelompok Usia<a class="headerlink" href="#total-pembelian-per-kelompok-usia" title="Permalink to this heading">#</a></h3>
+<p>Kelompok usia dengan jumlah pembelian terbanyak: 26-35 dengan jumlah pembelian 2031770578$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan kelompok usia dan menjumlahkan pembelian</span>
+<span class="n">age_group_purchase</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menemukan kelompok usia dengan jumlah pembelian terbanyak</span>
+<span class="n">max_purchase_age_group</span> <span class="o">=</span> <span class="n">age_group_purchase</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">age_group_purchase</span><span class="p">[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil kelompok usia dengan jumlah pembelian terbanyak</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kelompok usia dengan jumlah pembelian terbanyak: </span><span class="si">{</span><span class="n">max_purchase_age_group</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> dengan jumlah pembelian </span><span class="si">{</span><span class="n">max_purchase_age_group</span><span class="p">[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Memplot data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">age_group_purchase</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian per Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kelompok usia dengan jumlah pembelian terbanyak: 26-35 dengan jumlah pembelian 2031770578
+</pre></div>
+</div>
+<img alt="_images/cb260ab0016f28ffad191e08c2dd498f0963e24fa4a861c222cc0afb37fb8a44.png" src="_images/cb260ab0016f28ffad191e08c2dd498f0963e24fa4a861c222cc0afb37fb8a44.png" />
+</div>
+</div>
+</section>
+<section id="produk-yang-paling-sering-dibeli-oleh-setiap-kelompok-usia">
+<h3>Produk yang paling sering dibeli oleh setiap kelompok usia<a class="headerlink" href="#produk-yang-paling-sering-dibeli-oleh-setiap-kelompok-usia" title="Permalink to this heading">#</a></h3>
+<p>Produk yang paling sering dibeli oleh setiap kelompok usia:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Age</p></th>
+<th class="head"><p>Product_ID</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0-17</p></td>
+<td><p>P00255842</p></td>
+<td><p>65</p></td>
+</tr>
+<tr class="row-odd"><td><p>18-25</p></td>
+<td><p>P00265242</p></td>
+<td><p>389</p></td>
+</tr>
+<tr class="row-even"><td><p>26-35</p></td>
+<td><p>P00265242</p></td>
+<td><p>746</p></td>
+</tr>
+<tr class="row-odd"><td><p>36-45</p></td>
+<td><p>P00025442</p></td>
+<td><p>356</p></td>
+</tr>
+<tr class="row-even"><td><p>46-50</p></td>
+<td><p>P00265242</p></td>
+<td><p>138</p></td>
+</tr>
+<tr class="row-odd"><td><p>51-55</p></td>
+<td><p>P00265242</p></td>
+<td><p>140</p></td>
+</tr>
+<tr class="row-even"><td><p>55+</p></td>
+<td><p>P00265242</p></td>
+<td><p>104</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_product_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk yang paling sering dibeli dalam setiap kelompok usia</span>
+<span class="n">most_frequent_product_per_age_group</span> <span class="o">=</span> <span class="n">age_product_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">age_product_counts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Produk yang paling sering dibeli oleh setiap kelompok usia:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_frequent_product_per_age_group</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Produk yang paling sering dibeli oleh setiap kelompok usia:
+         Age Product_ID  Count
+1600    0-17  P00255842     65
+4608   18-25  P00265242    389
+7952   26-35  P00265242    746
+9203   36-45  P00025442    356
+14455  46-50  P00265242    138
+17397  51-55  P00265242    140
+20069    55+  P00265242    104
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h3>Produk yang Paling Sering Dibeli oleh Setiap Kelompok Usia<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>produk yang sering di beli  oleh setiap kelompok umur</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Membuat plot untuk produk yang paling sering dibeli oleh setiap kelompok usia</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_frequent_product_per_age_group</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk yang Paling Sering Dibeli oleh Setiap Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/29fcab201bdebbc7678ebcc083267d642906cf58b3353b246e152c50e776d575.png" src="_images/29fcab201bdebbc7678ebcc083267d642906cf58b3353b246e152c50e776d575.png" />
+</div>
+</div>
+</section>
+<section id="kota-yang-paling-umum-dihuni-dalam-setiap-kelompok-usia">
+<h3>Kota yang paling umum dihuni dalam setiap kelompok usia<a class="headerlink" href="#kota-yang-paling-umum-dihuni-dalam-setiap-kelompok-usia" title="Permalink to this heading">#</a></h3>
+<p>Kota yang paling umum dihuni dalam setiap kelompok usia:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Age</p></th>
+<th class="head"><p>City_Category</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0-17</p></td>
+<td><p>C</p></td>
+<td><p>7123</p></td>
+</tr>
+<tr class="row-odd"><td><p>18-25</p></td>
+<td><p>B</p></td>
+<td><p>43247</p></td>
+</tr>
+<tr class="row-even"><td><p>26-35</p></td>
+<td><p>B</p></td>
+<td><p>91584</p></td>
+</tr>
+<tr class="row-odd"><td><p>36-45</p></td>
+<td><p>B</p></td>
+<td><p>47598</p></td>
+</tr>
+<tr class="row-even"><td><p>46-50</p></td>
+<td><p>B</p></td>
+<td><p>20406</p></td>
+</tr>
+<tr class="row-odd"><td><p>51-55</p></td>
+<td><p>B</p></td>
+<td><p>17741</p></td>
+</tr>
+<tr class="row-even"><td><p>55+</p></td>
+<td><p>C</p></td>
+<td><p>12769</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan kelompok usia dan kota, lalu menghitung frekuensi masing-masing kota dalam setiap kelompok usia</span>
+<span class="n">age_city_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;City_Category&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan kota yang paling umum dihuni dalam setiap kelompok usia</span>
+<span class="n">most_common_city_per_age_group</span> <span class="o">=</span> <span class="n">age_city_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">age_city_counts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Age&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kota yang paling umum dihuni dalam setiap kelompok usia:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_common_city_per_age_group</span><span class="p">)</span>
+
+<span class="c1"># Memplot data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;City_Category&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_common_city_per_age_group</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kota yang Paling Umum Dihuni dalam Setiap Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kelompok Usia&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Kota&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;City Category&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kota yang paling umum dihuni dalam setiap kelompok usia:
+      Age City_Category  Count
+2    0-17             C   7123
+4   18-25             B  43247
+7   26-35             B  91584
+10  36-45             B  47598
+13  46-50             B  20406
+16  51-55             B  17741
+20    55+             C  12769
+</pre></div>
+</div>
+<img alt="_images/56d1a48883598e7cfe786e0b4d3d089604500d2af381cd2e6e93ba54f7e758c0.png" src="_images/56d1a48883598e7cfe786e0b4d3d089604500d2af381cd2e6e93ba54f7e758c0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customer-segmentation-berdasarkan-status-pernikahan">
+<h2>Customer Segmentation berdasarkan status pernikahan<a class="headerlink" href="#customer-segmentation-berdasarkan-status-pernikahan" title="Permalink to this heading">#</a></h2>
+<section id="produk-yang-paling-sering-dibeli-oleh-orang-yang-sudah-menikah-dan-belum-menikah">
+<h3>Produk yang Paling Sering Dibeli oleh Orang yang Sudah Menikah dan Belum Menikah<a class="headerlink" href="#produk-yang-paling-sering-dibeli-oleh-orang-yang-sudah-menikah-dan-belum-menikah" title="Permalink to this heading">#</a></h3>
+<p>Produk yang paling sering dibeli oleh orang yang sudah menikah dan belum menikah:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Marital_Status</p></th>
+<th class="head"><p>Product_ID</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>P00265242</p></td>
+<td><p>1087</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>P00265242</p></td>
+<td><p>793</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan status pernikahan dan produk, lalu menghitung frekuensi pembelian</span>
+<span class="n">marital_product_counts</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Marital_Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk yang paling sering dibeli dalam setiap status pernikahan</span>
+<span class="n">most_frequent_product_per_marital_status</span> <span class="o">=</span> <span class="n">marital_product_counts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">marital_product_counts</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Marital_Status&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Produk yang paling sering dibeli oleh orang yang sudah menikah dan belum menikah:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_frequent_product_per_marital_status</span><span class="p">)</span>
+
+<span class="c1"># Memplot data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Marital_Status&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_frequent_product_per_marital_status</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk yang Paling Sering Dibeli oleh Orang yang Sudah Menikah dan Belum Menikah&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Status Pernikahan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Produk yang paling sering dibeli oleh orang yang sudah menikah dan belum menikah:
+      Marital_Status Product_ID  Count
+2468               0  P00265242   1087
+5976               1  P00265242    793
+</pre></div>
+</div>
+<img alt="_images/3c810a7d2c7afd329be8c36970e238d9e0e977e3e893a168e2712bba9111cea6.png" src="_images/3c810a7d2c7afd329be8c36970e238d9e0e977e3e893a168e2712bba9111cea6.png" />
+</div>
+</div>
+</section>
+<section id="total-pembelian-berdasarkan-status-pernikaha">
+<h3>Total Pembelian Berdasarkan Status Pernikaha<a class="headerlink" href="#total-pembelian-berdasarkan-status-pernikaha" title="Permalink to this heading">#</a></h3>
+<p>Total pembelian berdasarkan status pernikahan:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Marital_Status</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>3008927447</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>2086885295</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan status pernikahan dan menghitung total pembelian</span>
+<span class="n">total_purchase_by_marital_status</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Marital_Status&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total pembelian berdasarkan status pernikahan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_purchase_by_marital_status</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan pie chart dengan palet warna viridis</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Belum Menikah&#39;</span><span class="p">,</span> <span class="s1">&#39;Menikah&#39;</span><span class="p">]</span>  <span class="c1"># 0 untuk belum menikah, 1 untuk menikah</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="n">total_purchase_by_marital_status</span><span class="p">[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sizes</span><span class="p">))</span>
+<span class="n">explode</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># memisahkan potongan pertama</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian Berdasarkan Status Pernikahan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># memastikan pie chart berbentuk lingkaran</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total pembelian berdasarkan status pernikahan:
+   Marital_Status    Purchase
+0               0  3008927447
+1               1  2086885295
+</pre></div>
+</div>
+<img alt="_images/1b0047fb49e54f35796efd29b3b7a59a266b3cf1bd2771d0c2c486d185008576.png" src="_images/1b0047fb49e54f35796efd29b3b7a59a266b3cf1bd2771d0c2c486d185008576.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customer-segmentation-berdasarkan-jenis-kelamin">
+<h2>Customer Segmentation berdasarkan jenis kelamin<a class="headerlink" href="#customer-segmentation-berdasarkan-jenis-kelamin" title="Permalink to this heading">#</a></h2>
+<section id="produk-terlaris-untuk-setiap-jenis-kelamin">
+<h3>produk terlaris untuk setiap jenis kelamin<a class="headerlink" href="#produk-terlaris-untuk-setiap-jenis-kelamin" title="Permalink to this heading">#</a></h3>
+<p>Produk terlaris yang dibeli oleh setiap jenis kelamin:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gender</p></th>
+<th class="head"><p>Product_ID</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>P00265242</p></td>
+<td><p>508</p></td>
+</tr>
+<tr class="row-odd"><td><p>M</p></td>
+<td><p>P00265242</p></td>
+<td><p>1372</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan jenis kelamin dan produk, lalu menghitung frekuensi pembelian</span>
+<span class="n">product_counts_by_gender</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk terlaris untuk setiap jenis kelamin</span>
+<span class="n">most_popular_product_by_gender</span> <span class="o">=</span> <span class="n">product_counts_by_gender</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">product_counts_by_gender</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Produk terlaris yang dibeli oleh setiap jenis kelamin:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_popular_product_by_gender</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan pie chart dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">most_popular_product_by_gender</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">gender</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">most_popular_product_by_gender</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+    <span class="n">sizes</span> <span class="o">=</span> <span class="n">most_popular_product_by_gender</span><span class="p">[</span><span class="n">most_popular_product_by_gender</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gender</span><span class="p">][</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">most_popular_product_by_gender</span><span class="p">[</span><span class="n">most_popular_product_by_gender</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gender</span><span class="p">][</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk Terlaris oleh &#39;</span> <span class="o">+</span> <span class="n">gender</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Produk terlaris yang dibeli oleh setiap jenis kelamin:
+     Gender Product_ID  Count
+2365      F  P00265242    508
+5872      M  P00265242   1372
+</pre></div>
+</div>
+<img alt="_images/8495c563296d2233ac691e997bc4d991ba729432e49286d99ac619f7d5d26586.png" src="_images/8495c563296d2233ac691e997bc4d991ba729432e49286d99ac619f7d5d26586.png" />
+</div>
+</div>
+</section>
+<section id="total-pembelian-per-kelompok-jenis-kelamin">
+<h3>Total pembelian per kelompok jenis kelamin<a class="headerlink" href="#total-pembelian-per-kelompok-jenis-kelamin" title="Permalink to this heading">#</a></h3>
+<p>Total pembelian per kelompok jenis kelamin:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gender</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>1186232642</p></td>
+</tr>
+<tr class="row-odd"><td><p>M</p></td>
+<td><p>3909580100</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan jenis kelamin dan menghitung total pembelian</span>
+<span class="n">total_purchase_by_gender</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total pembelian per kelompok jenis kelamin:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_purchase_by_gender</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan pie chart dengan palette warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">total_purchase_by_gender</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">total_purchase_by_gender</span><span class="p">[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="n">total_purchase_by_gender</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian per Kelompok Jenis Kelamin&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># Equal aspect ratio ensures that pie is drawn as a circle.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total pembelian per kelompok jenis kelamin:
+  Gender    Purchase
+0      F  1186232642
+1      M  3909580100
+</pre></div>
+</div>
+<img alt="_images/8fc689c88a3e2b1b417ce481827a58c688c07fa0a8c93f82d52d10b3aa6094c6.png" src="_images/8fc689c88a3e2b1b417ce481827a58c688c07fa0a8c93f82d52d10b3aa6094c6.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customer-segmentation-berdasarkan-pekerjaan">
+<h2>Customer Segmentation Berdasarkan Pekerjaan<a class="headerlink" href="#customer-segmentation-berdasarkan-pekerjaan" title="Permalink to this heading">#</a></h2>
+<section id="produk-yang-paling-sering-dibeli-oleh-setiap-jenis-pekerjaan">
+<h3>Produk yang paling sering dibeli oleh setiap jenis pekerjaan<a class="headerlink" href="#produk-yang-paling-sering-dibeli-oleh-setiap-jenis-pekerjaan" title="Permalink to this heading">#</a></h3>
+<p>Produk yang paling sering dibeli oleh setiap jenis pekerjaan:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Occupation</p></th>
+<th class="head"><p>Product_ID</p></th>
+<th class="head"><p>Count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>P00265242</p></td>
+<td><p>206</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>P00265242</p></td>
+<td><p>159</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>P00265242</p></td>
+<td><p>86</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>P00117942</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>P00265242</p></td>
+<td><p>287</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>P00265242</p></td>
+<td><p>38</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>P00265242</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>P00265242</p></td>
+<td><p>193</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>P00112142</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>P00034742</p></td>
+<td><p>26</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>P00145042</p></td>
+<td><p>65</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>P00265242</p></td>
+<td><p>42</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>P00057642</p></td>
+<td><p>131</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>P00265242</p></td>
+<td><p>42</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>P00265242</p></td>
+<td><p>110</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>P00025442</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>P00265242</p></td>
+<td><p>79</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>P00057642</p></td>
+<td><p>149</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>P00265242</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>P00265242</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>P00265242</p></td>
+<td><p>91</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan pekerjaan dan produk, lalu menghitung frekuensi pembelian</span>
+<span class="n">product_counts_by_occupation</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Occupation&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk yang paling sering dibeli untuk setiap jenis pekerjaan</span>
+<span class="n">most_popular_product_by_occupation</span> <span class="o">=</span> <span class="n">product_counts_by_occupation</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">product_counts_by_occupation</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Occupation&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Produk yang paling sering dibeli oleh setiap jenis pekerjaan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_popular_product_by_occupation</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan bar plot dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Occupation&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_popular_product_by_occupation</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk yang Paling Sering Dibeli oleh Setiap Jenis Pekerjaan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jenis Pekerjaan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Produk yang paling sering dibeli oleh setiap jenis pekerjaan:
+       Occupation Product_ID  Count
+2275            0  P00265242    206
+5378            1  P00265242    159
+8303            2  P00265242     86
+10000           3  P00117942     50
+14121           4  P00265242    287
+16696           5  P00265242     38
+19293           6  P00265242     72
+22281           7  P00265242    193
+23482           8  P00112142      8
+24424           9  P00034742     26
+26871          10  P00145042     65
+29788          11  P00265242     42
+30874          12  P00057642    131
+34474          13  P00265242     42
+36972          14  P00265242    110
+37921          15  P00025442     50
+41973          16  P00265242     79
+43293          17  P00057642    149
+47112          18  P00265242     25
+49383          19  P00265242     34
+52261          20  P00265242     91
+</pre></div>
+</div>
+<img alt="_images/5c63ee6aaa152585698e5d3c0a1bf8185867504839347ca916d5797567088e51.png" src="_images/5c63ee6aaa152585698e5d3c0a1bf8185867504839347ca916d5797567088e51.png" />
+</div>
+</div>
+</section>
+<section id="total-pembelian-per-jenis-pekerjaan">
+<h3>Total pembelian per jenis pekerjaan<a class="headerlink" href="#total-pembelian-per-jenis-pekerjaan" title="Permalink to this heading">#</a></h3>
+<p>Total pembelian per jenis pekerjaan:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Occupation</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>635406958</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>424614144</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>238028583</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>162002168</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>666244484</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>113649759</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>188416784</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>557371587</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>14737388</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>54340046</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>115844465</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>106751618</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>305449446</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>71919481</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>259454692</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>118960211</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>238346955</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>393281453</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>60721461</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>73700617</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>296570442</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan pekerjaan dan menghitung total pembelian</span>
+<span class="n">total_purchase_by_occupation</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Occupation&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total pembelian per jenis pekerjaan:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_purchase_by_occupation</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan diagram batang dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Occupation&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">total_purchase_by_occupation</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian Per Jenis Pekerjaan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jenis Pekerjaan&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total pembelian per jenis pekerjaan:
+    Occupation   Purchase
+0            0  635406958
+1            1  424614144
+2            2  238028583
+3            3  162002168
+4            4  666244484
+5            5  113649759
+6            6  188416784
+7            7  557371587
+8            8   14737388
+9            9   54340046
+10          10  115844465
+11          11  106751618
+12          12  305449446
+13          13   71919481
+14          14  259454692
+15          15  118960211
+16          16  238346955
+17          17  393281453
+18          18   60721461
+19          19   73700617
+20          20  296570442
+</pre></div>
+</div>
+<img alt="_images/6bd59bff865229d9020d565a83281a58fdf38c7793f2eb1966daa8f204573c12.png" src="_images/6bd59bff865229d9020d565a83281a58fdf38c7793f2eb1966daa8f204573c12.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customer-segmentation-berdasarkan-lamanya-menetap-di-kota-a">
+<h2>Customer Segmentation Berdasarkan Lamanya Menetap Di Kota A<a class="headerlink" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-a" title="Permalink to this heading">#</a></h2>
+<section id="produk-terlaris-tinggal-di-kota-a-berdasarkan-lama-tinggal">
+<h3>Produk Terlaris - Tinggal di Kota A Berdasarkan Lama Tinggal<a class="headerlink" href="#produk-terlaris-tinggal-di-kota-a-berdasarkan-lama-tinggal" title="Permalink to this heading">#</a></h3>
+<p>dapat kita ketahui produk terlaris pada Kota A adalah : P00265242</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyaring data untuk hanya kelompok Stay_In_Current_City_Years &quot;A&quot; di kota A</span>
+<span class="n">city_a_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+
+<span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan Product_ID, kemudian menghitung total pembelian</span>
+<span class="n">product_counts_by_years</span> <span class="o">=</span> <span class="n">city_a_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk terlaris untuk setiap kelompok Stay_In_Current_City_Years</span>
+<span class="n">most_popular_product_by_years</span> <span class="o">=</span> <span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Memplot data menggunakan diagram batang</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_popular_product_by_years</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk Terlaris - Tinggal di Kota A Berdasarkan Lama Tinggal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Lama Tinggal di Kota A (Tahun)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/21c63ceb0b9a314d062237e340c091a5fa6b6c53ff8b1cd10dbc0a9ea811b319.png" src="_images/21c63ceb0b9a314d062237e340c091a5fa6b6c53ff8b1cd10dbc0a9ea811b319.png" />
+</div>
+</div>
+</section>
+<section id="pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-a">
+<h3>Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota A:<a class="headerlink" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-a" title="Permalink to this heading">#</a></h3>
+<p>Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota A:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Stay_In_Current_City_Years</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>23960</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>23958</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>23961</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>23939</p></td>
+</tr>
+<tr class="row-even"><td><p>4+</p></td>
+<td><p>23940</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Memfilter data untuk kota A</span>
+<span class="n">df_city_A</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan menghitung pembelian maksimum</span>
+<span class="n">max_purchase_by_years</span> <span class="o">=</span> <span class="n">df_city_A</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota A:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max_purchase_by_years</span><span class="p">)</span>
+
+<span class="c1"># Memplot hasil menggunakan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">max_purchase_by_years</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pembelian Terbanyak bagi Setiap Kelompok Stay_In_Current_City_Years di Kota A&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pembelian Terbanyak&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota A:
+  Stay_In_Current_City_Years  Purchase
+0                          0     23960
+1                          1     23958
+2                          2     23961
+3                          3     23939
+4                         4+     23940
+</pre></div>
+</div>
+<img alt="_images/67ed2a6700e0b381c5966fa747beb401daea3a217651763ff17d241af9a2fc71.png" src="_images/67ed2a6700e0b381c5966fa747beb401daea3a217651763ff17d241af9a2fc71.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customer-segmentation-berdasarkan-lamanya-menetap-di-kota-b">
+<h2>Customer Segmentation Berdasarkan Lamanya Menetap Di Kota B<a class="headerlink" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-b" title="Permalink to this heading">#</a></h2>
+<section id="produk-terlaris-di-kota-b-berdasarkan-lama-tinggal">
+<h3>Produk Terlaris - di Kota B Berdasarkan Lama Tinggal<a class="headerlink" href="#produk-terlaris-di-kota-b-berdasarkan-lama-tinggal" title="Permalink to this heading">#</a></h3>
+<p>produk terlaris berdasarkan lama tinggal dapat di ketahui orang dengan lama tinggal :</p>
+<p>0 produk yang paling laris adalah P00112142 dan sisanya P00265242</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyaring data untuk kota B</span>
+<span class="n">df_b_city</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">]</span>
+
+<span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan Product_ID, lalu menghitung total pembelian</span>
+<span class="n">product_counts_by_years</span> <span class="o">=</span> <span class="n">df_b_city</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Menemukan produk terlaris untuk setiap Stay_In_Current_City_Years</span>
+<span class="n">most_popular_product_by_years</span> <span class="o">=</span> <span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Memplot data menggunakan bar chart dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_popular_product_by_years</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk Terlaris bagi Setiap Kelompok Stay_In_Current_City_Years di Kota B&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5a82f16fc3172e04616fa0476635cac6c40cc668fd6c7ed484ea5eac82b49e75.png" src="_images/5a82f16fc3172e04616fa0476635cac6c40cc668fd6c7ed484ea5eac82b49e75.png" />
+</div>
+</div>
+</section>
+<section id="pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-b">
+<h3>Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota B:<a class="headerlink" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-b" title="Permalink to this heading">#</a></h3>
+<p>Pembelian terbanyak bagi setiap kelompok Lama Tinggal di kota B:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Stay_In_Current_City_Years</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>255389454</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>765647432</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>384010246</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>392329940</p></td>
+</tr>
+<tr class="row-even"><td><p>4+</p></td>
+<td><p>318156533</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyaring data untuk kelompok Stay_In_Current_City_Years yang tinggal di kota B</span>
+<span class="n">filtered_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan menghitung total pembelian</span>
+<span class="n">purchase_by_years</span> <span class="o">=</span> <span class="n">filtered_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota B:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">purchase_by_years</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan diagram batang dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">purchase_by_years</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pembelian Terbanyak bagi Setiap Kelompok Stay_In_Current_City_Years yang Tinggal di Kota B&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota B:
+  Stay_In_Current_City_Years   Purchase
+0                          0  255389454
+1                          1  765647432
+2                          2  384010246
+3                          3  392329940
+4                         4+  318156533
+</pre></div>
+</div>
+<img alt="_images/d6202294597b72a8771131b39f3278247a0662bff7bd9f9665e00f3d47c16cc4.png" src="_images/d6202294597b72a8771131b39f3278247a0662bff7bd9f9665e00f3d47c16cc4.png" />
+</div>
+</div>
+</section>
+<section id="pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-c">
+<h3>Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota C:<a class="headerlink" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-c" title="Permalink to this heading">#</a></h3>
+<p>Total pembelian terbanyak bagi setiap kelompok Berdasar Lama Tinggal yang tinggal di kota C:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Stay_In_Current_City_Years</p></th>
+<th class="head"><p>Purchase</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>210312058</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>589463284</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>321939497</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>271444052</p></td>
+</tr>
+<tr class="row-even"><td><p>4+</p></td>
+<td><p>270648585</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan menghitung total pembelian untuk setiap kelompok</span>
+<span class="n">purchase_by_city_years</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="s1">&#39;City_Category&#39;</span><span class="p">])[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Memfilter data untuk hanya kelompok Stay_In_Current_City_Years yang tinggal di kota C</span>
+<span class="n">purchase_city_C</span> <span class="o">=</span> <span class="n">purchase_by_city_years</span><span class="p">[</span><span class="n">purchase_by_city_years</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+
+<span class="c1"># Menemukan total pembelian terbanyak untuk setiap kelompok</span>
+<span class="n">most_purchase_by_city_years</span> <span class="o">=</span> <span class="n">purchase_city_C</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Purchase&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota C:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">most_purchase_by_city_years</span><span class="p">)</span>
+
+<span class="c1"># Memplot data menggunakan diagram batang dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Purchase&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">purchase_city_C</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total Pembelian Terbanyak bagi Setiap Kelompok Stay_In_Current_City_Years yang Tinggal di Kota C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Total Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total pembelian terbanyak bagi setiap kelompok Stay_In_Current_City_Years yang tinggal di kota C:
+  Stay_In_Current_City_Years   Purchase
+0                          0  210312058
+1                          1  589463284
+2                          2  321939497
+3                          3  271444052
+4                         4+  270648585
+</pre></div>
+</div>
+<img alt="_images/19f327b11534334bce07ed101c4430efc82a9a8d7b62e5965da67b07ef92a062.png" src="_images/19f327b11534334bce07ed101c4430efc82a9a8d7b62e5965da67b07ef92a062.png" />
+</div>
+</div>
+</section>
+<section id="produk-terlaris-bagi-setiap-kelompok-lama-tinggal-di-kota-c">
+<h3>Produk Terlaris bagi Setiap Kelompok Lama Tinggal di Kota C<a class="headerlink" href="#produk-terlaris-bagi-setiap-kelompok-lama-tinggal-di-kota-c" title="Permalink to this heading">#</a></h3>
+<p>Produk Terlaris bagi Setiap Kelompok Lama Tinggal di Kota C :</p>
+<p>lama tinggal 0 tahun produk terlarisnya adalah P000025442, lama tinggal 1-3 tahun  produk terlarisnya P00265242,sedangkan untuk yang tinggal lebih dari 4 tahun produk terlarisnya P00112142</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter data untuk kota &#39;C&#39;</span>
+<span class="n">df_city_C</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;City_Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
+
+<span class="c1"># Mengelompokkan data berdasarkan Stay_In_Current_City_Years dan Product_ID, lalu menghitung frekuensi pembelian</span>
+<span class="n">product_counts_by_years</span> <span class="o">=</span> <span class="n">df_city_C</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="s1">&#39;Product_ID&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Menemukan produk terlaris untuk setiap kelompok Stay_In_Current_City_Years</span>
+<span class="n">most_popular_product_by_years</span> <span class="o">=</span> <span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">product_counts_by_years</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)[</span><span class="s1">&#39;Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span>
+
+<span class="c1"># Memplot data menggunakan diagram batang dengan palet warna Viridis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">most_popular_product_by_years</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Produk Terlaris bagi Setiap Kelompok Stay_In_Current_City_Years di Kota C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Stay_In_Current_City_Years&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frekuensi Pembelian&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Product_ID&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/687f864f565061136f7f4b9beca98f8b3e4e9a82eddaff5c974af6f22b49507b.png" src="_images/687f864f565061136f7f4b9beca98f8b3e4e9a82eddaff5c974af6f22b49507b.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">HELLO IAM MEGANTARA</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="retail-sales-analyst.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ANALISIS PENJUALAN TOKO RETAIL</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-fridha-megantara-putra">By Fridha Megantara Putra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-library-dan-data">import library dan data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-berdasarkan-kategori-produk">Total Pembelian Berdasarkan Kategori Produk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-usia">Customer Segmentation berdasarkan usia</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pekerjaan-yang-paling-umum-dalam-setiap-kelompok-usia">Pekerjaan yang Paling Umum dalam Setiap Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-kelompok-usia">Total Pembelian per Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-setiap-kelompok-usia">Produk yang paling sering dibeli oleh setiap kelompok usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Produk yang Paling Sering Dibeli oleh Setiap Kelompok Usia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kota-yang-paling-umum-dihuni-dalam-setiap-kelompok-usia">Kota yang paling umum dihuni dalam setiap kelompok usia</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-status-pernikahan">Customer Segmentation berdasarkan status pernikahan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-orang-yang-sudah-menikah-dan-belum-menikah">Produk yang Paling Sering Dibeli oleh Orang yang Sudah Menikah dan Belum Menikah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-berdasarkan-status-pernikaha">Total Pembelian Berdasarkan Status Pernikaha</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-jenis-kelamin">Customer Segmentation berdasarkan jenis kelamin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-untuk-setiap-jenis-kelamin">produk terlaris untuk setiap jenis kelamin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-kelompok-jenis-kelamin">Total pembelian per kelompok jenis kelamin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-pekerjaan">Customer Segmentation Berdasarkan Pekerjaan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-yang-paling-sering-dibeli-oleh-setiap-jenis-pekerjaan">Produk yang paling sering dibeli oleh setiap jenis pekerjaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-pembelian-per-jenis-pekerjaan">Total pembelian per jenis pekerjaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-a">Customer Segmentation Berdasarkan Lamanya Menetap Di Kota A</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-tinggal-di-kota-a-berdasarkan-lama-tinggal">Produk Terlaris - Tinggal di Kota A Berdasarkan Lama Tinggal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-a">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota A:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customer-segmentation-berdasarkan-lamanya-menetap-di-kota-b">Customer Segmentation Berdasarkan Lamanya Menetap Di Kota B</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-di-kota-b-berdasarkan-lama-tinggal">Produk Terlaris - di Kota B Berdasarkan Lama Tinggal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-b">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota B:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembelian-terbanyak-bagi-setiap-kelompok-berdasarkan-lama-tinggal-yang-tinggal-di-kota-c">Pembelian terbanyak bagi setiap kelompok Berdasarkan Lama Tinggal yang tinggal di kota C:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#produk-terlaris-bagi-setiap-kelompok-lama-tinggal-di-kota-c">Produk Terlaris bagi Setiap Kelompok Lama Tinggal di Kota C</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
