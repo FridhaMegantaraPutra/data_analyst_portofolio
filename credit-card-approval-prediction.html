@@ -1,0 +1,2259 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Credit Card Approval Prediction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'credit-card-approval-prediction';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="TATA: Online Retail Dataset" href="tata-online-retail-dataset.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    HELLO IAM MEGANTARA
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="e-commerce-walmart-sales.html">e-Commerce (Walmart) Sales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retail-sales-analyst.html">ANALISIS PENJUALAN TOKO RETAIL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tata-online-retail-dataset.html">TATA: Online Retail Dataset</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Credit Card Approval Prediction</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcredit-card-approval-prediction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/credit-card-approval-prediction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Credit Card Approval Prediction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-fridha-megantara-putra">by FRIDHA MEGANTARA PUTRA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penejelasan-dataset">penejelasan dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">IMPORT DATASET</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pra-pemrosesan">Pra Pemrosesan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encode-data-kategorikal-menjadi-binary-dan-ubah-tanggal-menjadi-tanggal-asli-dari-sekarag">encode data kategorikal menjadi binary dan ubah tanggal menjadi tanggal asli dari sekarag</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-nilai-pada-data-2">Mengubah Nilai pada data 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nilai-6-mewakili-x-dan-7-mewakili-c-dianggap-sebagai-ekstensi-dari-0-5">Nilai 6 mewakili ‘X’ dan 7 mewakili ‘C’, dianggap sebagai ekstensi dari 0-5.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-merge">melakukan merge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#df1-dan-df2-akan-di-merge">df1 dan df2 akan di merge</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-kolom">Drop Kolom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buang-kolom-yang-tidak-digunakan">buang kolom yang tidak digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomalisai">nomalisai</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-normalisasi-menggunakan-minmax-scaler">melakukan normalisasi menggunakan MinMax scaler</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-train-dan-tes">membagi data menjadi train dan tes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memnamgun-model-dengan-multi-layer-perceptron">Memnamgun model dengan Multi Layer Perceptron</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-model-dengan-knn">Membangun model dengan KNN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-model-dengan-gaussian-naive-bayes">Membangun model dengan gaussian naive bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangn-un-model-dengan-random-forest-classifier">Membangn=un Model dengan Random Forest Classifier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-matrix-setiap-model">Evaluasi Matrix Setiap Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-mlp-classifier">Confusion Matrix for MLP Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-knn-classifier">Confusion Matrix for KNN Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-naive-bayes-classifier">Confusion Matrix for Naive Bayes Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-random-forest-classifier">Confusion Matrix for Random Forest Classifier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-distribusi-data-test-dan-train">Melihat distribusi data test dan train</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="credit-card-approval-prediction">
+<h1>Credit Card Approval Prediction<a class="headerlink" href="#credit-card-approval-prediction" title="Permalink to this heading">#</a></h1>
+<section id="by-fridha-megantara-putra">
+<h2>by FRIDHA MEGANTARA PUTRA<a class="headerlink" href="#by-fridha-megantara-putra" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="penejelasan-dataset">
+<h2>penejelasan dataset<a class="headerlink" href="#penejelasan-dataset" title="Permalink to this heading">#</a></h2>
+<p>Kartu skor kredit adalah metode pengendalian risiko yang umum digunakan dalam industri keuangan. Metode ini menggunakan informasi pribadi dan data yang diajukan oleh pemohon kartu kredit untuk memprediksi kemungkinan gagal bayar di masa depan dan pinjaman kartu kredit. Bank dapat memutuskan apakah akan menerbitkan kartu kredit kepada pemohon. Skor kredit dapat mengkuantifikasi besarnya risiko secara objektif.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature name</p></th>
+<th class="head"><p>Explanation</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Client number</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CODE_GENDER</p></td>
+<td><p>Gender</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>FLAG_OWN_CAR</p></td>
+<td><p>Is there a car</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>FLAG_OWN_REALTY</p></td>
+<td><p>Is there a property</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>CNT_CHILDREN</p></td>
+<td><p>Number of children</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>AMT_INCOME_TOTAL</p></td>
+<td><p>Annual income</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>NAME_INCOME_TYPE</p></td>
+<td><p>Income category</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>NAME_EDUCATION_TYPE</p></td>
+<td><p>Education level</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>NAME_FAMILY_STATUS</p></td>
+<td><p>Marital status</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>NAME_HOUSING_TYPE</p></td>
+<td><p>Way of living</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>DAYS_BIRTH</p></td>
+<td><p>Birthday</p></td>
+<td><p>Count backwards from current day (0), -1 means yesterday</p></td>
+</tr>
+<tr class="row-odd"><td><p>DAYS_EMPLOYED</p></td>
+<td><p>Start date of employment</p></td>
+<td><p>Count backwards from current day (0). If positive, it means the person is currently unemployed.</p></td>
+</tr>
+<tr class="row-even"><td><p>FLAG_MOBIL</p></td>
+<td><p>Is there a mobile phone</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>FLAG_WORK_PHONE</p></td>
+<td><p>Is there a work phone</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>FLAG_PHONE</p></td>
+<td><p>Is there a phone</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>FLAG_EMAIL</p></td>
+<td><p>Is there an email</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>OCCUPATION_TYPE</p></td>
+<td><p>Occupation</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>CNT_FAM_MEMBERS</p></td>
+<td><p>Family size</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature name</p></th>
+<th class="head"><p>Explanation</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Client number</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>MONTHS_BALANCE</p></td>
+<td><p>Record month</p></td>
+<td><p>The month of the extracted data is the starting point, backwards, 0 is the current month, -1 is the previous month, and so on</p></td>
+</tr>
+<tr class="row-even"><td><p>STATUS</p></td>
+<td><p>Status</p></td>
+<td><p>0: 1-29 days past due<br>1: 30-59 days past due<br>2: 60-89 days overdue<br>3: 90-119 days overdue<br>4: 120-149 days overdue<br>5: Overdue or bad debts, write-offs for more than 150 days<br>C: paid off that month<br>X: No loan for the month</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="import-dataset">
+<h2>IMPORT DATASET<a class="headerlink" href="#import-dataset" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df1 = pd.read_csv(&#39;/kaggle/input/credit-card-approval-prediction/application_record.csv&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print (df1[&#39;CODE_GENDER&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;FLAG_OWN_CAR&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;FLAG_OWN_REALTY&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;CNT_CHILDREN&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;NAME_INCOME_TYPE&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;NAME_EDUCATION_TYPE&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;NAME_FAMILY_STATUS&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;NAME_HOUSING_TYPE&#39;].unique())</span>
+<span class="c1"># print (df1[&#39;OCCUPATION_TYPE&#39;].unique())</span>
+<span class="c1"># print (df[&#39;CNT_FAM_MEMBERS&#39;].unique())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df1</span><span class="o">.</span><span class="n">dtypes</span>
+
+<span class="ne">NameError</span>: name &#39;df1&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>CODE_GENDER</th>
+      <th>FLAG_OWN_CAR</th>
+      <th>FLAG_OWN_REALTY</th>
+      <th>CNT_CHILDREN</th>
+      <th>AMT_INCOME_TOTAL</th>
+      <th>NAME_INCOME_TYPE</th>
+      <th>NAME_EDUCATION_TYPE</th>
+      <th>NAME_FAMILY_STATUS</th>
+      <th>NAME_HOUSING_TYPE</th>
+      <th>DAYS_BIRTH</th>
+      <th>DAYS_EMPLOYED</th>
+      <th>FLAG_MOBIL</th>
+      <th>FLAG_WORK_PHONE</th>
+      <th>FLAG_PHONE</th>
+      <th>FLAG_EMAIL</th>
+      <th>OCCUPATION_TYPE</th>
+      <th>CNT_FAM_MEMBERS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5008804</td>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>Working</td>
+      <td>Higher education</td>
+      <td>Civil marriage</td>
+      <td>Rented apartment</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5008805</td>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>Working</td>
+      <td>Higher education</td>
+      <td>Civil marriage</td>
+      <td>Rented apartment</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5008806</td>
+      <td>M</td>
+      <td>Y</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>112500.0</td>
+      <td>Working</td>
+      <td>Secondary / secondary special</td>
+      <td>Married</td>
+      <td>House / apartment</td>
+      <td>-21474</td>
+      <td>-1134</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Security staff</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5008808</td>
+      <td>F</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>270000.0</td>
+      <td>Commercial associate</td>
+      <td>Secondary / secondary special</td>
+      <td>Single / not married</td>
+      <td>House / apartment</td>
+      <td>-19110</td>
+      <td>-3051</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Sales staff</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5008809</td>
+      <td>F</td>
+      <td>N</td>
+      <td>Y</td>
+      <td>0</td>
+      <td>270000.0</td>
+      <td>Commercial associate</td>
+      <td>Secondary / secondary special</td>
+      <td>Single / not married</td>
+      <td>House / apartment</td>
+      <td>-19110</td>
+      <td>-3051</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Sales staff</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="pra-pemrosesan">
+<h2>Pra Pemrosesan<a class="headerlink" href="#pra-pemrosesan" title="Permalink to this heading">#</a></h2>
+<section id="encode-data-kategorikal-menjadi-binary-dan-ubah-tanggal-menjadi-tanggal-asli-dari-sekarag">
+<h3>encode data kategorikal menjadi binary dan ubah tanggal menjadi tanggal asli dari sekarag<a class="headerlink" href="#encode-data-kategorikal-menjadi-binary-dan-ubah-tanggal-menjadi-tanggal-asli-dari-sekarag" title="Permalink to this heading">#</a></h3>
+<p>kolom yang memiliki nilai kategorikal akan di encode menjadi binary dan mengubah tanggal menjadi tanggal asli</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Definisikan kolom-kolom yang perlu diubah</span>
+<span class="n">columns_to_encode</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;CODE_GENDER&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FLAG_OWN_CAR&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;FLAG_OWN_REALTY&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NAME_INCOME_TYPE&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NAME_EDUCATION_TYPE&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NAME_FAMILY_STATUS&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NAME_HOUSING_TYPE&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;OCCUPATION_TYPE&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Lakukan one-hot encoding untuk setiap kolom</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns_to_encode</span><span class="p">:</span>
+    <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="n">column</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+<span class="c1"># Ubah nilai False menjadi 0 dan True menjadi 1</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df1</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">df1</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">df1</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># columns_to_encode = [</span>
+<span class="c1">#     &#39;CODE_GENDER&#39;,</span>
+<span class="c1">#     &#39;FLAG_OWN_CAR&#39;,</span>
+<span class="c1">#     &#39;FLAG_OWN_REALTY&#39;,</span>
+<span class="c1">#     &#39;NAME_INCOME_TYPE&#39;,</span>
+<span class="c1">#     &#39;NAME_EDUCATION_TYPE&#39;,</span>
+<span class="c1">#     &#39;NAME_FAMILY_STATUS&#39;,</span>
+<span class="c1">#     &#39;NAME_HOUSING_TYPE&#39;,</span>
+<span class="c1">#     &#39;OCCUPATION_TYPE&#39;</span>
+<span class="c1"># ]</span>
+
+<span class="c1"># for column in columns_to_encode:</span>
+<span class="c1">#     df1 = pd.get_dummies(df1, columns=[column], prefix=column.replace(&#39;_&#39;, &#39; &#39;))</span>
+<span class="c1"># ------------------------------------------------------------------------------------------------</span>
+
+<span class="c1"># Tanggal hari ini</span>
+<span class="n">today</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">days_birth_to_date</span><span class="p">(</span><span class="n">days_birth</span><span class="p">):</span>
+    <span class="n">birth_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days_birth</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">birth_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Ubah DAYS_BIRTH menjadi usia dalam tahun</span>
+<span class="n">df1</span><span class="p">[</span><span class="s1">&#39;AGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;DAYS_BIRTH&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">365</span>
+<span class="c1"># Bulatkan usia ke bilangan bulat terdekat</span>
+<span class="n">df1</span><span class="p">[</span><span class="s1">&#39;AGE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;AGE&#39;</span><span class="p">])</span>
+
+<span class="c1"># Ubah DAYS_BIRTH menjadi usia dalam tahun</span>
+<span class="n">df1</span><span class="p">[</span><span class="s1">&#39;EMPLOYED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">365</span>
+<span class="c1"># Bulatkan usia ke bilangan bulat terdekat</span>
+<span class="n">df1</span><span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>CNT_CHILDREN</th>
+      <th>AMT_INCOME_TOTAL</th>
+      <th>DAYS_BIRTH</th>
+      <th>DAYS_EMPLOYED</th>
+      <th>FLAG_MOBIL</th>
+      <th>FLAG_WORK_PHONE</th>
+      <th>FLAG_PHONE</th>
+      <th>FLAG_EMAIL</th>
+      <th>CNT_FAM_MEMBERS</th>
+      <th>...</th>
+      <th>OCCUPATION TYPE_Managers</th>
+      <th>OCCUPATION TYPE_Medicine staff</th>
+      <th>OCCUPATION TYPE_Private service staff</th>
+      <th>OCCUPATION TYPE_Realty agents</th>
+      <th>OCCUPATION TYPE_Sales staff</th>
+      <th>OCCUPATION TYPE_Secretaries</th>
+      <th>OCCUPATION TYPE_Security staff</th>
+      <th>OCCUPATION TYPE_Waiters/barmen staff</th>
+      <th>AGE</th>
+      <th>EMPLOYED</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5008805</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5008806</td>
+      <td>0</td>
+      <td>112500.0</td>
+      <td>-21474</td>
+      <td>-1134</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>59.0</td>
+      <td>3.106849</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5008808</td>
+      <td>0</td>
+      <td>270000.0</td>
+      <td>-19110</td>
+      <td>-3051</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>52.0</td>
+      <td>8.358904</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5008809</td>
+      <td>0</td>
+      <td>270000.0</td>
+      <td>-19110</td>
+      <td>-3051</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>52.0</td>
+      <td>8.358904</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 57 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># df2= pd.read_csv(&#39;/kaggle/input/credit-card-approval-prediction/credit_record.csv&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>MONTHS_BALANCE</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5001711</td>
+      <td>0</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5001711</td>
+      <td>-1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5001711</td>
+      <td>-2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5001711</td>
+      <td>-3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5001712</td>
+      <td>0</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="mengubah-nilai-pada-data-2">
+<h2>Mengubah Nilai pada data 2<a class="headerlink" href="#mengubah-nilai-pada-data-2" title="Permalink to this heading">#</a></h2>
+<section id="nilai-6-mewakili-x-dan-7-mewakili-c-dianggap-sebagai-ekstensi-dari-0-5">
+<h3>Nilai 6 mewakili ‘X’ dan 7 mewakili ‘C’, dianggap sebagai ekstensi dari 0-5.<a class="headerlink" href="#nilai-6-mewakili-x-dan-7-mewakili-c-dianggap-sebagai-ekstensi-dari-0-5" title="Permalink to this heading">#</a></h3>
+<p>hal ini dilakukan agar tidak ada huruf</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-hot encoding</span>
+<span class="n">df2_encoded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;STATUS&#39;</span><span class="p">],</span> <span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;STATUS&#39;</span><span class="p">)</span>
+
+<span class="c1"># atau Binary encoding</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;STATUS&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;STATUS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;X&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">})</span>
+<span class="c1"># Nilai di atas 5 mewakili &#39;X&#39; dan &#39;C&#39;, dianggap sebagai ekstensi dari 0-5.</span>
+<span class="n">df2_encoded</span> <span class="o">=</span> <span class="n">df2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df2_encoded</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              ID  MONTHS_BALANCE STATUS
+0        5001711               0      6
+1        5001711              -1      0
+2        5001711              -2      0
+3        5001711              -3      0
+4        5001712               0      7
+...          ...             ...    ...
+1048570  5150487             -25      7
+1048571  5150487             -26      7
+1048572  5150487             -27      7
+1048573  5150487             -28      7
+1048574  5150487             -29      7
+
+[1048575 rows x 3 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="melakukan-merge">
+<h2>melakukan merge<a class="headerlink" href="#melakukan-merge" title="Permalink to this heading">#</a></h2>
+<section id="df1-dan-df2-akan-di-merge">
+<h3>df1 dan df2 akan di merge<a class="headerlink" href="#df1-dan-df2-akan-di-merge" title="Permalink to this heading">#</a></h3>
+<p>df1 dan df2 akan di merge dengan inner berdasarkan ID</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>CNT_CHILDREN</th>
+      <th>AMT_INCOME_TOTAL</th>
+      <th>DAYS_BIRTH</th>
+      <th>DAYS_EMPLOYED</th>
+      <th>FLAG_MOBIL</th>
+      <th>FLAG_WORK_PHONE</th>
+      <th>FLAG_PHONE</th>
+      <th>FLAG_EMAIL</th>
+      <th>CNT_FAM_MEMBERS</th>
+      <th>...</th>
+      <th>OCCUPATION TYPE_Private service staff</th>
+      <th>OCCUPATION TYPE_Realty agents</th>
+      <th>OCCUPATION TYPE_Sales staff</th>
+      <th>OCCUPATION TYPE_Secretaries</th>
+      <th>OCCUPATION TYPE_Security staff</th>
+      <th>OCCUPATION TYPE_Waiters/barmen staff</th>
+      <th>AGE</th>
+      <th>EMPLOYED</th>
+      <th>MONTHS_BALANCE</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-2</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5008804</td>
+      <td>0</td>
+      <td>427500.0</td>
+      <td>-12005</td>
+      <td>-4542</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-4</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 59 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method NDFrame.tail of              ID  CNT_CHILDREN  AMT_INCOME_TOTAL  DAYS_BIRTH  DAYS_EMPLOYED  \
+0       5008804             0          427500.0      -12005          -4542   
+1       5008804             0          427500.0      -12005          -4542   
+2       5008804             0          427500.0      -12005          -4542   
+3       5008804             0          427500.0      -12005          -4542   
+4       5008804             0          427500.0      -12005          -4542   
+...         ...           ...               ...         ...            ...   
+777710  5150337             0          112500.0       -9188          -1193   
+777711  5150337             0          112500.0       -9188          -1193   
+777712  5150337             0          112500.0       -9188          -1193   
+777713  5150337             0          112500.0       -9188          -1193   
+777714  5150337             0          112500.0       -9188          -1193   
+
+        FLAG_MOBIL  FLAG_WORK_PHONE  FLAG_PHONE  FLAG_EMAIL  CNT_FAM_MEMBERS  \
+0                1                1           0           0              2.0   
+1                1                1           0           0              2.0   
+2                1                1           0           0              2.0   
+3                1                1           0           0              2.0   
+4                1                1           0           0              2.0   
+...            ...              ...         ...         ...              ...   
+777710           1                0           0           0              1.0   
+777711           1                0           0           0              1.0   
+777712           1                0           0           0              1.0   
+777713           1                0           0           0              1.0   
+777714           1                0           0           0              1.0   
+
+        ...  OCCUPATION TYPE_Private service staff  \
+0       ...                                      0   
+1       ...                                      0   
+2       ...                                      0   
+3       ...                                      0   
+4       ...                                      0   
+...     ...                                    ...   
+777710  ...                                      0   
+777711  ...                                      0   
+777712  ...                                      0   
+777713  ...                                      0   
+777714  ...                                      0   
+
+        OCCUPATION TYPE_Realty agents  OCCUPATION TYPE_Sales staff  \
+0                                   0                            0   
+1                                   0                            0   
+2                                   0                            0   
+3                                   0                            0   
+4                                   0                            0   
+...                               ...                          ...   
+777710                              0                            0   
+777711                              0                            0   
+777712                              0                            0   
+777713                              0                            0   
+777714                              0                            0   
+
+        OCCUPATION TYPE_Secretaries  OCCUPATION TYPE_Security staff  \
+0                                 0                               0   
+1                                 0                               0   
+2                                 0                               0   
+3                                 0                               0   
+4                                 0                               0   
+...                             ...                             ...   
+777710                            0                               0   
+777711                            0                               0   
+777712                            0                               0   
+777713                            0                               0   
+777714                            0                               0   
+
+        OCCUPATION TYPE_Waiters/barmen staff   AGE   EMPLOYED  MONTHS_BALANCE  \
+0                                          0  33.0  12.443836               0   
+1                                          0  33.0  12.443836              -1   
+2                                          0  33.0  12.443836              -2   
+3                                          0  33.0  12.443836              -3   
+4                                          0  33.0  12.443836              -4   
+...                                      ...   ...        ...             ...   
+777710                                     0  25.0   3.268493              -9   
+777711                                     0  25.0   3.268493             -10   
+777712                                     0  25.0   3.268493             -11   
+777713                                     0  25.0   3.268493             -12   
+777714                                     0  25.0   3.268493             -13   
+
+        STATUS  
+0            7  
+1            7  
+2            7  
+3            7  
+4            7  
+...        ...  
+777710       0  
+777711       2  
+777712       1  
+777713       0  
+777714       0  
+
+[777715 rows x 59 columns]&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="drop-kolom">
+<h2>Drop Kolom<a class="headerlink" href="#drop-kolom" title="Permalink to this heading">#</a></h2>
+<section id="buang-kolom-yang-tidak-digunakan">
+<h3>buang kolom yang tidak digunakan<a class="headerlink" href="#buang-kolom-yang-tidak-digunakan" title="Permalink to this heading">#</a></h3>
+<p>kolom ini di buang karena saat one-hot encoding akan membuat kolom baru yang berupa bunary jadi kolom lama sudah tidak di gunakan lagi karna sudah tergantikan</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_INCOME_TOTAL&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_BIRTH&#39;</span><span class="p">,</span> <span class="s1">&#39;DAYS_EMPLOYED&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CNT_CHILDREN</th>
+      <th>FLAG_MOBIL</th>
+      <th>FLAG_WORK_PHONE</th>
+      <th>FLAG_PHONE</th>
+      <th>FLAG_EMAIL</th>
+      <th>CNT_FAM_MEMBERS</th>
+      <th>CODE GENDER_F</th>
+      <th>CODE GENDER_M</th>
+      <th>FLAG OWN CAR_N</th>
+      <th>FLAG OWN CAR_Y</th>
+      <th>...</th>
+      <th>OCCUPATION TYPE_Private service staff</th>
+      <th>OCCUPATION TYPE_Realty agents</th>
+      <th>OCCUPATION TYPE_Sales staff</th>
+      <th>OCCUPATION TYPE_Secretaries</th>
+      <th>OCCUPATION TYPE_Security staff</th>
+      <th>OCCUPATION TYPE_Waiters/barmen staff</th>
+      <th>AGE</th>
+      <th>EMPLOYED</th>
+      <th>MONTHS_BALANCE</th>
+      <th>STATUS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-2</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-3</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>33.0</td>
+      <td>12.443836</td>
+      <td>-4</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>777710</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25.0</td>
+      <td>3.268493</td>
+      <td>-9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>777711</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25.0</td>
+      <td>3.268493</td>
+      <td>-10</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>777712</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25.0</td>
+      <td>3.268493</td>
+      <td>-11</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>777713</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25.0</td>
+      <td>3.268493</td>
+      <td>-12</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>777714</th>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>25.0</td>
+      <td>3.268493</td>
+      <td>-13</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>777715 rows × 55 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="nomalisai">
+<h2>nomalisai<a class="headerlink" href="#nomalisai" title="Permalink to this heading">#</a></h2>
+<section id="melakukan-normalisasi-menggunakan-minmax-scaler">
+<h3>melakukan normalisasi menggunakan MinMax scaler<a class="headerlink" href="#melakukan-normalisasi-menggunakan-minmax-scaler" title="Permalink to this heading">#</a></h3>
+<p>normalissasi berguna untuk mengubah nilai menjadi antara 0-1 agar tidak terjadi perbedaan data yang signifikan antar input yang lain</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+
+<span class="c1"># Inisialisasi MinMaxScaler</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+
+<span class="c1"># Ambil kolom yang ingin dinormalisasi (tidak termasuk kolom &quot;STATUS&quot;)</span>
+<span class="n">columns_to_normalize</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">&#39;STATUS&#39;</span><span class="p">])</span>
+
+<span class="c1"># Lakukan normalisasi pada kolom yang dipilih</span>
+<span class="n">df_normalized</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># Membuat salinan DataFrame untuk hasil normalisasi</span>
+<span class="n">df_normalized</span><span class="p">[</span><span class="n">columns_to_normalize</span><span class="p">]</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_normalized</span><span class="p">[</span><span class="n">columns_to_normalize</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>simpan data normalisasi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_normalized</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;normal.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_normalized</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CNT_CHILDREN                                         float64
+FLAG_MOBIL                                           float64
+FLAG_WORK_PHONE                                      float64
+FLAG_PHONE                                           float64
+FLAG_EMAIL                                           float64
+CNT_FAM_MEMBERS                                      float64
+CODE GENDER_F                                        float64
+CODE GENDER_M                                        float64
+FLAG OWN CAR_N                                       float64
+FLAG OWN CAR_Y                                       float64
+FLAG OWN REALTY_N                                    float64
+FLAG OWN REALTY_Y                                    float64
+NAME INCOME TYPE_Commercial associate                float64
+NAME INCOME TYPE_Pensioner                           float64
+NAME INCOME TYPE_State servant                       float64
+NAME INCOME TYPE_Student                             float64
+NAME INCOME TYPE_Working                             float64
+NAME EDUCATION TYPE_Academic degree                  float64
+NAME EDUCATION TYPE_Higher education                 float64
+NAME EDUCATION TYPE_Incomplete higher                float64
+NAME EDUCATION TYPE_Lower secondary                  float64
+NAME EDUCATION TYPE_Secondary / secondary special    float64
+NAME FAMILY STATUS_Civil marriage                    float64
+NAME FAMILY STATUS_Married                           float64
+NAME FAMILY STATUS_Separated                         float64
+NAME FAMILY STATUS_Single / not married              float64
+NAME FAMILY STATUS_Widow                             float64
+NAME HOUSING TYPE_Co-op apartment                    float64
+NAME HOUSING TYPE_House / apartment                  float64
+NAME HOUSING TYPE_Municipal apartment                float64
+NAME HOUSING TYPE_Office apartment                   float64
+NAME HOUSING TYPE_Rented apartment                   float64
+NAME HOUSING TYPE_With parents                       float64
+OCCUPATION TYPE_Accountants                          float64
+OCCUPATION TYPE_Cleaning staff                       float64
+OCCUPATION TYPE_Cooking staff                        float64
+OCCUPATION TYPE_Core staff                           float64
+OCCUPATION TYPE_Drivers                              float64
+OCCUPATION TYPE_HR staff                             float64
+OCCUPATION TYPE_High skill tech staff                float64
+OCCUPATION TYPE_IT staff                             float64
+OCCUPATION TYPE_Laborers                             float64
+OCCUPATION TYPE_Low-skill Laborers                   float64
+OCCUPATION TYPE_Managers                             float64
+OCCUPATION TYPE_Medicine staff                       float64
+OCCUPATION TYPE_Private service staff                float64
+OCCUPATION TYPE_Realty agents                        float64
+OCCUPATION TYPE_Sales staff                          float64
+OCCUPATION TYPE_Secretaries                          float64
+OCCUPATION TYPE_Security staff                       float64
+OCCUPATION TYPE_Waiters/barmen staff                 float64
+AGE                                                  float64
+EMPLOYED                                             float64
+MONTHS_BALANCE                                       float64
+STATUS                                                object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="membagi-data-menjadi-train-dan-tes">
+<h2>membagi data menjadi train dan tes<a class="headerlink" href="#membagi-data-menjadi-train-dan-tes" title="Permalink to this heading">#</a></h2>
+<p>data akan di bagi menjadi test dan train dengan distribusi data train 80% dan test 20%</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># data = pd.read_csv(&#39;/kaggle/working/normal.csv&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Pisahkan fitur (X) dan label (Y)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;STATUS&#39;</span><span class="p">])</span>  <span class="c1"># Ambil semua kolom kecuali &#39;STATUS&#39;</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;STATUS&#39;</span><span class="p">]</span>  <span class="c1"># Ambil kolom &#39;STATUS&#39; sebagai label</span>
+
+<span class="c1"># Bagi data menjadi data pelatihan dan data uji</span>
+<span class="c1"># Gunakan parameter stratify untuk memastikan pembagian yang seimbang berdasarkan label Y</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this heading">#</a></h2>
+<section id="memnamgun-model-dengan-multi-layer-perceptron">
+<h3>Memnamgun model dengan Multi Layer Perceptron<a class="headerlink" href="#memnamgun-model-dengan-multi-layer-perceptron" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># Inisialisasi model MLP</span>
+<span class="n">mlp_model</span> <span class="o">=</span> <span class="n">MLPClassifier</span><span class="p">(</span><span class="n">hidden_layer_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Latih model pada data pelatihan</span>
+<span class="n">mlp_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi pada data uji</span>
+<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">mlp_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi performa model</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.42372205756607495
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membangun-model-dengan-knn">
+<h3>Membangun model dengan KNN<a class="headerlink" href="#membangun-model-dengan-knn" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1"># Inisialisasi model KNN</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Latih model pada data pelatihan</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi pada data uji</span>
+<span class="n">Y_pred_knn</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi performa model</span>
+<span class="n">accuracy_knn</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_knn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy KNN:&quot;</span><span class="p">,</span> <span class="n">accuracy_knn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy KNN: 0.8835434574362073
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membangun-model-dengan-gaussian-naive-bayes">
+<h3>Membangun model dengan gaussian naive bayes<a class="headerlink" href="#membangun-model-dengan-gaussian-naive-bayes" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="c1"># Inisialisasi model Naive Bayes</span>
+<span class="n">nb_model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+
+<span class="c1"># Latih model pada data pelatihan</span>
+<span class="n">nb_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi pada data uji</span>
+<span class="n">Y_pred_nb</span> <span class="o">=</span> <span class="n">nb_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi performa model</span>
+<span class="n">accuracy_nb</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_nb</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy Naive Bayes:&quot;</span><span class="p">,</span> <span class="n">accuracy_nb</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy Naive Bayes: 0.42372205756607495
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membangn-un-model-dengan-random-forest-classifier">
+<h3>Membangn=un Model dengan Random Forest Classifier<a class="headerlink" href="#membangn-un-model-dengan-random-forest-classifier" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># Inisialisasi model Random Forest</span>
+<span class="n">rf_model</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Latih model pada data pelatihan</span>
+<span class="n">rf_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1"># Lakukan prediksi pada data uji</span>
+<span class="n">Y_pred_rf</span> <span class="o">=</span> <span class="n">rf_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluasi performa model</span>
+<span class="n">accuracy_rf</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_rf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy Random Forest:&quot;</span><span class="p">,</span> <span class="n">accuracy_rf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy Random Forest: 0.8743562873289058
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="evaluasi-matrix-setiap-model">
+<h2>Evaluasi Matrix Setiap Model<a class="headerlink" href="#evaluasi-matrix-setiap-model" title="Permalink to this heading">#</a></h2>
+<section id="confusion-matrix-for-mlp-classifier">
+<h3>Confusion Matrix for MLP Classifier<a class="headerlink" href="#confusion-matrix-for-mlp-classifier" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+
+<span class="c1"># Menghitung confusion matrix</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan confusion matrix</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm</span><span class="p">)</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix for MLP Classifier&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/fcad3b6004afcffcc0817b6970fa61f0a530eb196e896b95dda9c8efcda31cef.png" src="_images/fcad3b6004afcffcc0817b6970fa61f0a530eb196e896b95dda9c8efcda31cef.png" />
+</div>
+</div>
+</section>
+<section id="confusion-matrix-for-knn-classifier">
+<h3>Confusion Matrix for KNN Classifier<a class="headerlink" href="#confusion-matrix-for-knn-classifier" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung confusion matrix</span>
+<span class="n">cm_knn</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_knn</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan confusion matrix</span>
+<span class="n">disp_knn</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm_knn</span><span class="p">)</span>
+<span class="n">disp_knn</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">BuGn</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix for KNN Classifier&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8ca46cd09d8c5d266db4d07324b63d6f969288711ccc32c1805beb1887b6a64f.png" src="_images/8ca46cd09d8c5d266db4d07324b63d6f969288711ccc32c1805beb1887b6a64f.png" />
+</div>
+</div>
+</section>
+<section id="confusion-matrix-for-naive-bayes-classifier">
+<h3>Confusion Matrix for Naive Bayes Classifier<a class="headerlink" href="#confusion-matrix-for-naive-bayes-classifier" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung confusion matrix</span>
+<span class="n">cm_nb</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_nb</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan confusion matrix</span>
+<span class="n">disp_nb</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm_nb</span><span class="p">)</span>
+<span class="n">disp_nb</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">PuBu</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix for Naive Bayes Classifier&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5b8712b345b670bfd5fbe36a19cc51c65e5ffa89cfadba0a8d6e64cc78bc88b0.png" src="_images/5b8712b345b670bfd5fbe36a19cc51c65e5ffa89cfadba0a8d6e64cc78bc88b0.png" />
+</div>
+</div>
+</section>
+<section id="confusion-matrix-for-random-forest-classifier">
+<h3>Confusion Matrix for Random Forest Classifier<a class="headerlink" href="#confusion-matrix-for-random-forest-classifier" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung confusion matrix</span>
+<span class="n">cm_rf</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">Y_pred_rf</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan confusion matrix</span>
+<span class="n">disp_rf</span> <span class="o">=</span> <span class="n">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="o">=</span><span class="n">cm_rf</span><span class="p">)</span>
+<span class="n">disp_rf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">GnBu</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix for Random Forest Classifier&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2dbb14a869829fe65453058a9d56545b07277ed0fae05e1aceb8297be6601642.png" src="_images/2dbb14a869829fe65453058a9d56545b07277ed0fae05e1aceb8297be6601642.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="melihat-distribusi-data-test-dan-train">
+<h2>Melihat distribusi data test dan train<a class="headerlink" href="#melihat-distribusi-data-test-dan-train" title="Permalink to this heading">#</a></h2>
+<p>langkah ini di lakukan untuk mencocokan jumlah data pada cinfusion matrix</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">test_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s2">&quot;Train&quot;</span><span class="p">,</span> <span class="s2">&quot;Test&quot;</span><span class="p">],</span> <span class="p">[</span><span class="n">train_size</span><span class="p">,</span> <span class="n">test_size</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">])</span>
+
+
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">bars</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Train and Test Data Sizes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Samples&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Dataset&#39;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1bdac293c8db586e75155ebe82b36572083d9f6c9c5032489f7f55081f835c07.png" src="_images/1bdac293c8db586e75155ebe82b36572083d9f6c9c5032489f7f55081f835c07.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">test_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">unique_classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
+
+
+<span class="n">train_class_counts</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Y_train</span> <span class="o">==</span> <span class="bp">cls</span><span class="p">)</span> <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">unique_classes</span><span class="p">]</span>
+<span class="n">test_class_counts</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Y_test</span> <span class="o">==</span> <span class="bp">cls</span><span class="p">)</span> <span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="n">unique_classes</span><span class="p">]</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">bar_width</span> <span class="o">=</span> <span class="mf">0.35</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_classes</span><span class="p">))</span>
+
+<span class="n">train_bars</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span> <span class="o">-</span> <span class="n">bar_width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">train_class_counts</span><span class="p">,</span> <span class="n">bar_width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Train&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">)</span>
+<span class="n">test_bars</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">bar_width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">test_class_counts</span><span class="p">,</span> <span class="n">bar_width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Test&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightcoral&#39;</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">train_bars</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">bar</span> <span class="ow">in</span> <span class="n">test_bars</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="mi">20</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()),</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Class Distribution in Train and Test Data&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;STATUS&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Number of Samples&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">unique_classes</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1e2b6f35a71c9ad54950d2b5d60c3e38c2d9e950bbb2c0ce8d3c95afb05556b1.png" src="_images/1e2b6f35a71c9ad54950d2b5d60c3e38c2d9e950bbb2c0ce8d3c95afb05556b1.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tata-online-retail-dataset.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TATA: Online Retail Dataset</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-fridha-megantara-putra">by FRIDHA MEGANTARA PUTRA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penejelasan-dataset">penejelasan dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-dataset">IMPORT DATASET</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pra-pemrosesan">Pra Pemrosesan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encode-data-kategorikal-menjadi-binary-dan-ubah-tanggal-menjadi-tanggal-asli-dari-sekarag">encode data kategorikal menjadi binary dan ubah tanggal menjadi tanggal asli dari sekarag</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-nilai-pada-data-2">Mengubah Nilai pada data 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nilai-6-mewakili-x-dan-7-mewakili-c-dianggap-sebagai-ekstensi-dari-0-5">Nilai 6 mewakili ‘X’ dan 7 mewakili ‘C’, dianggap sebagai ekstensi dari 0-5.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-merge">melakukan merge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#df1-dan-df2-akan-di-merge">df1 dan df2 akan di merge</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drop-kolom">Drop Kolom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#buang-kolom-yang-tidak-digunakan">buang kolom yang tidak digunakan</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomalisai">nomalisai</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-normalisasi-menggunakan-minmax-scaler">melakukan normalisasi menggunakan MinMax scaler</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-train-dan-tes">membagi data menjadi train dan tes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memnamgun-model-dengan-multi-layer-perceptron">Memnamgun model dengan Multi Layer Perceptron</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-model-dengan-knn">Membangun model dengan KNN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangun-model-dengan-gaussian-naive-bayes">Membangun model dengan gaussian naive bayes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membangn-un-model-dengan-random-forest-classifier">Membangn=un Model dengan Random Forest Classifier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-matrix-setiap-model">Evaluasi Matrix Setiap Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-mlp-classifier">Confusion Matrix for MLP Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-knn-classifier">Confusion Matrix for KNN Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-naive-bayes-classifier">Confusion Matrix for Naive Bayes Classifier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-matrix-for-random-forest-classifier">Confusion Matrix for Random Forest Classifier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melihat-distribusi-data-test-dan-train">Melihat distribusi data test dan train</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
