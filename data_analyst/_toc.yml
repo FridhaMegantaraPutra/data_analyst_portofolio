@@ -4,6 +4,7 @@
 format: jb-book
 root: intro
 chapters:
-  - file: e-commerce-walmart-sales.ipynb
+  - file: e-commerce-walmart-sales
   - file: retail-sales-analyst
   - file: tata-online-retail-dataset
+  - file: credit-card-approval-prediction
